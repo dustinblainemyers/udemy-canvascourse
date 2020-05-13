@@ -1,13 +1,12 @@
-//Definitions
-const canvas = document.getElementById("hello-world-canvas");
-const context = canvas.getContext("2d");
+window.onload = function () {
+  //Definitions
+  const canvas = document.getElementById("hello-world-canvas");
+  const context = canvas.getContext("2d");
 
-//Blue rectangle
+  //Draw line steps
 
-context.fillStyle = "blue";
-context.fillRect(10, 40, 30, 70);
-
-// Yellow rectangle
-
-context.fillStyle = "yellow";
-context.fillRect(50, 30, 60, 30);
+  context.beginPath(); // reset the context state
+  context.moveTo(30, 70); // moveTo(x,y) -> starting point of line
+  context.lineTo(130, 70); // line(x,y) -> end point of the line
+  context.stroke(); // draws the line
+};
