@@ -3,12 +3,30 @@ window.onload = function () {
   const canvas = document.getElementById("hello-world-canvas");
   const context = canvas.getContext("2d");
 
-  //Draw line steps
+  //First line
 
-  context.beginPath(); // reset the context state
-  context.moveTo(30, 30); // moveTo(x,y) -> starting point of line
-  context.lineTo(80, 80); // line(x,y) -> end point of the line
-  context.lineTo(200, 50);
-  //   context.lineTo();
-  context.stroke(); // draws the line
+  context.beginPath();
+  context.strokeStyle = "red";
+  context.lineWidth = 10;
+  context.moveTo(100, 100);
+  context.lineTo(300, 100);
+  context.stroke();
+
+  //Second line
+
+  context.beginPath();
+  context.strokeStyle = "blue";
+  context.lineWidth = 10;
+  context.moveTo(100, 125);
+  context.lineTo(300, 125);
+  context.stroke();
+
+  //Third Line
+
+  context.beginPath();
+  context.strokeStyle = "green";
+  context.lineWidth = 10;
+  context.moveTo(100, 150);
+  context.lineTo(300, 150);
+  context.stroke();
 };
